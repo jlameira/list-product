@@ -9,6 +9,7 @@
     "e2e": "vue-cli-service e2e",
     "lint": "vue-cli-service lint",
     "e2e:open": "vue-cli-service e2e:open",
+    "postinstall": "npm run build",
     "start": "node server.js"
   },
   "dependencies": {
