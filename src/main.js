@@ -6,7 +6,11 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import './registerServiceWorker';
-import { ClientTable, Event, ServerTable } from 'vue-tables-2';
+import {
+  ClientTable,
+  Event,
+  ServerTable
+} from 'vue-tables-2';
 
 Vue.use(ClientTable);
 Vue.use(Event);
