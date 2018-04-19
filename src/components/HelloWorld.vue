@@ -13,38 +13,40 @@
 </template>
 
 <script>
-import { produtos } from '../hinodeExport';
+  import {
+    produtos
+  } from '../hinodeExport';
 
-export default {
-  name: 'HelloWorld',
-  data() {
-    return {
-      columns: ['uso', 'linha', 'id', 'descricao', 'valor', 'pontos'],
-      tableData: produtos,
-      options: {
-        filterByColumn: true,
-        perPage: 100,
-        // see the options API
-      },
-    };
-  },
-  methods: {
-    listaOsProdutosPrecoPontos() {
-      produtos.sort((a, b) => {
-        const vA = a.pontos / a.valor;
-        const vB = b.pontos / b.valor;
-        // a.media = vA;
-        // b.media = vB;
-        if (vA > vB) {
-          return -1;
-        }
-        return 1;
-      });
-      this.tableData = produtos;
-      // this.tableData
+  export default {
+    name: 'HelloWorld',
+    data() {
+      return {
+        columns: ['linha', 'id', 'descricao', 'valor', 'pontos'],
+        tableData: produtos,
+        options: {
+          filterByColumn: true,
+          perPage: 100,
+          // see the options API
+        },
+      };
     },
-  },
-};
+    methods: {
+      listaOsProdutosPrecoPontos() {
+        produtos.sort((a, b) => {
+          const vA = a.pontos / a.valor;
+          const vB = b.pontos / b.valor;
+          // a.media = vA;
+          // b.media = vB;
+          if (vA > vB) {
+            return -1;
+          }
+          return 1;
+        });
+        this.tableData = produtos;
+        // this.tableData
+      },
+    },
+  };
 </script>
 
 <style lang="scss">
