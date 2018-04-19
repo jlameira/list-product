@@ -1,15 +1,15 @@
 <template>
-<div class="my-3 p-3 bg-white rounded box-shadow">
+  <div class="my-3 p-3 bg-white rounded box-shadow">
 
 
-<div class="row">
-    <div class="lead">
+    <div class="row">
+      <div class="lead">
 
-  <button  type="button" class="btn btn-outline-secondary" v-on:click="listaOsProdutosPrecoPontos" >Pontuam Mais</button>
+        <button type="button" class="btn btn-outline-secondary" v-on:click="listaOsProdutosPrecoPontos">Pontuam Mais</button>
+      </div>
+      <v-client-table :ref="100" :data="tableData" :columns="columns" :options="options"></v-client-table>
+    </div>
   </div>
-   <v-client-table :ref="100" :data="tableData" :columns="columns" :options="options"></v-client-table>
-</div>
-</div>
 </template>
 
 <script>
@@ -48,7 +48,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../custom-bootstrap.scss";
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+  @import "../custom-bootstrap.scss";
+  @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 </style>
-
